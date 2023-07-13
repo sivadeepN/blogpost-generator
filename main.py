@@ -4,7 +4,7 @@ import openai_utils
 
 ### Define your paths here
 
-PATH_TO_BLOG_REPO = Path('/.git')
+PATH_TO_BLOG_REPO = Path('/Users/sivadeep/Documents/GitHub/blogpost-generator/.git')
 PATH_TO_BLOG = PATH_TO_BLOG_REPO.parent
 PATH_TO_CONTENT = PATH_TO_BLOG/"content"
 PATH_TO_CONTENT.mkdir(exist_ok=True, parents=True)

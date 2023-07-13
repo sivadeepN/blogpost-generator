@@ -4,8 +4,8 @@ import shutil
 
 import openai
 
-openai.api_key = os.getenv("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")
-
+# openai.api_key = os.getenv("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")
+openai.api_key = "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"
 def create_prompt(title):
     prompt = """Jose's Website
  
