@@ -13,7 +13,11 @@ PATH_TO_CONTENT = PATH_TO_BLOG / "content"
 PATH_TO_CONTENT.mkdir(exist_ok=True, parents=True)
 ###
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/')
+def index():
+    return render_template('./index.html')
+
+@app.route('/blog', methods=['GET', 'POST'])
 def create_blog():
     if request.method == 'POST':
         title = request.form['title']
@@ -31,7 +35,7 @@ def create_blog():
         # Render a template with the submitted title
         return render_template('result.html', title=title)
     else:
-        return render_template('form.html')
+        return render_template('index.html')
 
 if __name__ == '__main__':
     app.run()
